@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+CML=$1
+while read VAR;
+do
+	values=(($factor VAR))
+	echo "$VAR=$(VAR/${values[1]})*${values[1]}"
+done < $CML
